@@ -2,7 +2,6 @@ package org.firstinspires.ftc.teamcode.Drivetrains;
 
 
 import com.qualcomm.hardware.bosch.BNO055IMU;
-import com.qualcomm.hardware.lynx.LynxModule;
 import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 import com.qualcomm.robotcore.hardware.ColorSensor;
 import com.qualcomm.robotcore.hardware.DcMotor;
@@ -64,17 +63,6 @@ public abstract class Drivetrain {
             } catch (Exception e) {
                 op.telemetry.addData("ERROR WHILE ADDING THREAD:", e);
             }
-        }
-    }
-
-    public void addCustomGyro(String gyroName){
-        try{
-            this.gyros.put(gyroName,new IMUHelper(op,LynxOptimizedI2cSensorFactory.createLynxBNO055IMU(op.hardwareMap.get(LynxModule.class, "Expansion Hub 2"), 0)));
-            op.telemetry.addData("Debugging CUSTOM GYRO","Successfuly added custom gyro: " + gyroName);
-            op.telemetry.update();
-        } catch (Exception e){
-            op.telemetry.addData("ERROR WHILE ADDING CUSTOM GYRO:",e);
-            op.telemetry.update();
         }
     }
 
