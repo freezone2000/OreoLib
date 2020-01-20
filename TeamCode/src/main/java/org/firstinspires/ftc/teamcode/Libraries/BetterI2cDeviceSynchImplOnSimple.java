@@ -1,6 +1,5 @@
 package org.firstinspires.ftc.teamcode.Libraries;
 
-import com.qualcomm.hardware.lynx.LynxI2cDeviceSynchV1;
 import com.qualcomm.robotcore.hardware.I2cDeviceSynch;
 import com.qualcomm.robotcore.hardware.I2cDeviceSynchImplOnSimple;
 import com.qualcomm.robotcore.hardware.I2cDeviceSynchSimple;

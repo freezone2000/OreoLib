@@ -2,20 +2,16 @@ package org.firstinspires.ftc.teamcode.Drivetrains;
 
 
 import com.qualcomm.hardware.bosch.BNO055IMU;
-import com.qualcomm.hardware.lynx.LynxEmbeddedIMU;
 import com.qualcomm.hardware.lynx.LynxModule;
 import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 import com.qualcomm.robotcore.hardware.ColorSensor;
 import com.qualcomm.robotcore.hardware.DcMotor;
 import com.qualcomm.robotcore.hardware.DigitalChannel;
 import com.qualcomm.robotcore.hardware.Servo;
-import com.qualcomm.robotcore.hardware.TouchSensor;
 import com.qualcomm.robotcore.util.ElapsedTime;
 
-import org.firstinspires.ftc.robotcore.external.Telemetry;
 import org.firstinspires.ftc.teamcode.Libraries.IMUHelper;
 import org.firstinspires.ftc.teamcode.Libraries.Joystick;
-import org.firstinspires.ftc.teamcode.Libraries.LynxOptimizedI2cSensorFactory;
 
 import java.util.HashMap;
 
@@ -28,6 +24,8 @@ public abstract class Drivetrain {
     public volatile Joystick joy1; //1st controller
     public volatile Joystick joy2; //2nd controller
     public volatile ElapsedTime timer;
+
+
     public volatile HashMap<String,DcMotor> motors = new HashMap<>(); //contains all motors on robot
     public volatile HashMap<String,DcMotor> driveMotors = new HashMap<>(); //contains motors that control wheels
     public volatile HashMap<String, Servo> servos = new HashMap<>(); //contains all servos on robot
